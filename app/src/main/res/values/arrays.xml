@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="rute">
+        <item> Malang - TulungAgung </item>
+        <item> Jakarta - Surabaya </item>
+        <item> Malang - Surabaya </item>
+        <item> Jakarta - Bali </item>
+    </string-array>
+
+</resources>

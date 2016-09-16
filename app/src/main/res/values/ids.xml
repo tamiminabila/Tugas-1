@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="editTextNama" type="id" />
+    <item name="editTextTelp" type="id" />
+    <item name="editTextJpd" type="id" />
+    <item name="editTextJpa" type="id" />
+    <item name="buttonPesan" type="id" />
+</resources>
