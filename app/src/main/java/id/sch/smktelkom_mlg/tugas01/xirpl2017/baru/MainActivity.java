@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     RadioButton rbme, rbmalaba, rbgajayana;
     CheckBox cbdua, cbtiga, cblebih;
     Spinner spRute;
-    TextView tvhasil, tvNama, tvtelp, tvdewasa, tvanak;
+    TextView tvhasil,tvhasil2,tvhasil3, tvNama, tvtelp, tvdewasa, tvanak, tvkereta;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,14 +44,55 @@ public class MainActivity extends AppCompatActivity {
         tvdewasa = (TextView) findViewById(R.id.tvdewasa);
         tvanak = (TextView) findViewById(R.id.tvanak);
         tvtelp = (TextView) findViewById(R.id.tvtelp);
+        tvkereta = (TextView) findViewById(R.id.tvkereta);
+        tvhasil2 = (TextView) findViewById(R.id.textView8);
+        tvhasil3 = (TextView) findViewById(R.id.textView7);
 
 
         bPesan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 doProcess();
+                doProcess2();
+                doClick();
+            }
+
+            private void doClick() {
+                tvhasil2.setText("Rute Perjalanan :"+ spRute.getSelectedItem().toString());
+
+                String hasil="Total Penumpang :\n";
+                int startlen = hasil.length();
+                if(cbdua.isChecked()) hasil+=cbdua.getText()+"\n";
+                if(cbtiga.isChecked()) hasil+=cbtiga.getText()+"\n";
+                if(cblebih.isChecked()) hasil+=cblebih.getText()+"\n";
+
+                if(hasil.length()==startlen) hasil+="Tidak Ada Pada Pilihan";
+
+                tvhasil3.setText(hasil);
             }
         });
+    }
+
+    private void doProcess2()
+    {
+        String hasil = null;
+
+        if(rgkereta.getCheckedRadioButtonId()!=-1)
+        {
+            RadioButton rb = (RadioButton)
+                    findViewById(rgkereta.getCheckedRadioButtonId());
+            hasil = rb.getText().toString();
+        }
+
+        if (hasil == null)
+        {
+            tvkereta.setText("Anda belum memilih Kereta");
+        }
+        else
+        {
+            tvkereta.setText("Kereta : "+hasil) ;
+        }
+
     }
 
     private void doProcess() {
@@ -60,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
             String telp = etNomerTelepon.getText().toString();
             tvtelp.setText("No. Telp : " + telp);
             tvNama.setText("Nama : " + nama);
+
         }
     }
 
@@ -79,12 +121,20 @@ public class MainActivity extends AppCompatActivity {
             etNama.setError(null);
         }
 
-        if (telp.isEmpty()) {
+        if (telp.isEmpty())
+
+        {
             etNomerTelepon.setError("Nomor Telepon belum diisi");
-        } else if (telp.length() < 9) {
+        }
+        else if (telp.length() < 9)
+        {
             etNomerTelepon.setError("Nomor Telepon tidak valid (kurang dari 10 digit)");
             valid = false;
-        } else {
+        }
+
+        else
+
+        {
             etNomerTelepon.setError(null);
         }
 

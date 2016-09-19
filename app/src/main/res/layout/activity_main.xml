@@ -156,6 +156,12 @@
             android:checked="false"
             android:text="Lebih dari 3" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jumlah Penumpang Dewasa"
+            android:id="@+id/textView" />
+
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -166,10 +172,15 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_below="@+id/spinner"
-                android:text="Jumlah Penumpang Dewasa" />
+                android:layout_below="@+id/spinner" />
 
         </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jumlah Penumpang Anak"
+            android:id="@+id/textView3" />
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -183,8 +194,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_alignRight="@+id/judul"
-                android:layout_below="@+id/jpd"
-                android:text="Jumlah Penumpang Anak" />
+                android:layout_below="@+id/jpd" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -220,6 +230,12 @@
             tools:text="telp" />
 
         <TextView
+            android:id="@+id/tvkereta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="New Text" />
+
+        <TextView
             android:id="@+id/tvdewasa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -230,12 +246,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="anak" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="New Text" />
 
         <TextView
             android:id="@+id/textView7"
