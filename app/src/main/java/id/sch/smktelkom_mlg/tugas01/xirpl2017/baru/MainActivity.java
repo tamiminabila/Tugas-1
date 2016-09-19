@@ -99,8 +99,14 @@ public class MainActivity extends AppCompatActivity {
         if (isValid()) {
             String nama = etNama.getText().toString();
             String telp = etNomerTelepon.getText().toString();
+            String jumlahpenumpangdewasa = etJumlahPenumpangDewasa.getText().toString();
+            String jumlahpenumpanganak = etJumlahPenumpangAnak.getText().toString();
             tvtelp.setText("No. Telp : " + telp);
             tvNama.setText("Nama : " + nama);
+            tvdewasa.setText("Jumlah Penumpang Dewasa : " + jumlahpenumpangdewasa);
+            tvanak.setText("Jumlah Penumpang Anak : " + jumlahpenumpanganak);
+
+
 
         }
     }
